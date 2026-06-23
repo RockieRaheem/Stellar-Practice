@@ -27,5 +27,16 @@ fn main() {
         println!("Top scorer is: {}", player);
     }
 
+    // Create a phonebook hashmap
+
+    let mut contacts: HashMap<&str, &str> = HashMap::new();
+
+    contacts.insert("Alex", "0765432345");
+    contacts.insert("Viola", "0768564334");
+
+    match contacts.get("Alex") {
+        Some(number) => println!("Alex's number is {}", number),
+        None => println!("Not found in contacts."),
+    }
 
 }
