@@ -1,3 +1,5 @@
+use std::collections::HashMap;
+
 fn main() {
     // Create a vector to hold the tech stack
     let mut tech_stack: Vec<&str> = Vec::new();
@@ -24,4 +26,6 @@ fn main() {
     for player in &top_scorers {
         println!("Top scorer is: {}", player);
     }
+
+
 }
