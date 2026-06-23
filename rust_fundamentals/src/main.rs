@@ -1,4 +1,5 @@
 use std::collections::HashMap;
+use std::fs;
 
 fn main() {
     // Create a vector to hold the tech stack
@@ -38,5 +39,17 @@ fn main() {
         Some(number) => println!("Alex's number is {}", number),
         None => println!("Not found in contacts."),
     }
+
+    // Writing students to a students.txt file
+    let students = "Alex, Cathy, Troy";
+
+    fs::write("students.txt", students).expect("Could not write to students file.");
+
+    // Reading students data from students.txt
+
+    let data = fs::read_to_string("students.txt").expect("Students data not found.");
+
+    println!("Students data is: {}",data);
+
 
 }
