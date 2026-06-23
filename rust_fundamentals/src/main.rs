@@ -11,4 +11,17 @@ fn main() {
     for stack in tech_stack {
       println!("The stack is: {}", stack);
     }
+
+    // Create a vector to hold Top Scorers
+
+    let mut top_scorers: Vec<String> = Vec::new();
+
+
+    top_scorers.push("Mbappe".to_string());
+    top_scorers.push("Messi".to_string());
+    top_scorers.push("Halaand".to_string());
+
+    for player in &top_scorers {
+        println!("Top scorer is: {}", player);
+    }
 }
